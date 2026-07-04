@@ -1,10 +1,13 @@
-pipeline {
-    agent any
-    stages {
-        stage('build') {
-            steps {
-                echo 'This is a minimal pipeline.'
-            }
+agent {
+    docker {
+        image 'gradle:8.14-jdk21'
+    }
+}
+
+stages {
+    stage('build') {
+        steps {
+            sh './gradlew build'
         }
     }
 }
