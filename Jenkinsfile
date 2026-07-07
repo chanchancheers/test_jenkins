@@ -1,17 +1,15 @@
 pipeline {
-    agent {
-        docker {
-            image 'gradle:8.14-jdk21'
-        }
-    }
+    agent any
+
     stages {
-        stage('build') {
+        stage('test') {
             steps {
-                sh 'whoami'
-                sh 'pwd'
-                sh 'cd /var/jenkins_home'
-                sh 'pwd'
-                sh 'touch it_works.txt'
+                sh '''
+                    whoami
+                    pwd
+                    touch it_works.txt
+                    ls -al
+                '''
             }
         }
     }
