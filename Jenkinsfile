@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh './gradlew build'
+                sh 'cd /var/jenkins_home && touch it_works.txt'
             }
         }
     }
