@@ -7,7 +7,11 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'cd /var/jenkins_home && touch it_works.txt'
+                sh 'whoami'
+                sh 'pwd'
+                sh 'cd /var/jenkins_home'
+                sh 'pwd'
+                sh 'touch it_works.txt'
             }
         }
     }
