@@ -10,7 +10,6 @@ pipeline {
                     touch it_works.txt
                     ls -al
                 '''
-                
                 sh 'exit 1'
             }
         }
