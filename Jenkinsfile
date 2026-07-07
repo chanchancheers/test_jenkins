@@ -11,7 +11,6 @@ pipeline {
                 sh 'pwd'
                 sh 'cd /var/jenkins_home'
                 sh 'pwd'
-                
                 sh 'touch it_works.txt'
             }
         }
